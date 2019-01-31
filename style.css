@@ -1,0 +1,76 @@
+html,
+body {
+    /* Background */
+    width: 100%;
+    height: 100%;
+    background: black;
+    margin: 0;
+    /* Pas de scrollbar */
+    overflow: hidden;
+    /* centrage */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galaxie {
+    font-size: 32px;
+    color: #4bd5ee;
+    /* Fondu noir */
+    opacity: O;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-name: galaxie;
+    animation-timing-function: ease-out;
+}
+
+@keyframes galaxie {
+    0%      {opacity: 0;}
+    20%     {opacity: 1;}
+    80%     {opacity: 1;}
+    100%    {opacity: 0;}
+}
+
+.crawl {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 800px;
+    margin: 0 0 0 -400px;
+    top: auto;
+    bottom: 0;
+    height: 50em;
+    color: #ffff66;    
+    font-size: 64px;
+    text-align: justify;
+    /*Rotation*/
+    transform-origin: center bottom;
+    transform: perspective(300px) rotateX(25deg);
+}
+
+.crawl > div {
+    /* positionne la div en bas de l'écran (non visible) */
+    /* l'animation la fait remonter progressivement */
+    position: absolute;
+    top: 100%; 
+    animation-delay: 2s; /* Démarre l'animation après la première */
+    animation-duration: 20s;
+    animation-name: crawl;
+    animation-timing-function: linear;
+}
+
+@keyframes crawl {
+    0% {
+        top: 100%;
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1; /* disparition progressive à la fin */
+    }
+
+    100% {
+        top: 0;
+        opacity: 0;
+    }
+}
