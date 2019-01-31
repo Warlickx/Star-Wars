@@ -53,7 +53,7 @@ body {
     position: absolute;
     top: 100%; 
     animation-delay: 4s; /* Timer avec la disparition de "galaxie" */
-    animation-duration: 20s;
+    animation-duration: 40s;
     animation-name: crawl;
     animation-timing-function: linear;
 }
